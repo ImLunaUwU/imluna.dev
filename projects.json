@@ -1,0 +1,20 @@
+[
+    {
+        "ProjectName": "Portfolio Website",
+        "ProjectDescription": "A personal portfolio website to showcase my projects and skills. In fact it is this very website.",
+        "ProjectLink": "https://github.com/ImLunaUwU/imluna.dev/",
+        "ProjectImage": "images/Portfolio.png"
+    },
+    {
+        "ProjectName": "Personal Website",
+        "ProjectDescription": "A personal (non-professional) website with basic info about me.",
+        "ProjectLink": "https://github.com/ImLunaUwU/imlunauwu.github.io/",
+        "ProjectImage": "images/Personal.png"
+    },
+    {
+        "ProjectName": "LunaHR",
+        "ProjectDescription": "A couple of simple applications to send heart rate data to VRChat through OSC.\nCurrently compatible with Polar (H10) HR monitors and Pulsoid.",
+        "ProjectLink": "https://github.com/ImLunaUwU/LunaHR",
+        "ProjectImage": "images/LunaHR.png"
+    }
+]

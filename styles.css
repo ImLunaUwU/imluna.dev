@@ -1,0 +1,305 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Ensure this is behind all other content */
+}
+
+#particle-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it doesn't block interactions */
+    filter: blur(0.8px); /* Add a slight blur effect */
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    height: 60px; /* Fixed height */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: to limit the max width of the header content */
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.code-icon {
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 8px;
+    color: #ff6347;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 15;
+}
+
+.menu-toggle .fa-times {
+    display: none;
+}
+
+.menu-toggle.open .fa-bars {
+    display: none;
+}
+
+.menu-toggle.open .fa-times {
+    display: block;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.menu-toggle.bounce {
+    animation: bounce 0.2s ease-in-out;
+}
+
+.menu-toggle.bounce-reverse {
+    animation: bounce 0.2s ease-in-out reverse;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #ff6347;
+    color: #fff;
+}
+
+.main-container {
+    flex: 1; /* Ensure the main container takes up the available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 5; /* Ensure this is above the background */
+    position: relative;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: row; /* Align content horizontally */
+    text-align: center; /* Center text within the section */
+}
+
+.text {
+    max-width: 500px;
+}
+
+.text h1 {
+    font-size: 3rem;
+    color: #ff6347; /* Optional: Adds a pop of color */
+}
+
+.text p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px; /* Add spacing above the skills section */
+}
+
+#icon-container img {
+    width: 100px;
+    height: 100px;
+}
+
+#icon-container p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 5; /* Ensure this is above the background */
+    position: relative;
+}
+
+/* Styles for the projects and skills pages */
+
+.projects-section, .skills-section {
+    width: 100%;
+    text-align: center;
+    color: #e0e0e0;
+    padding: 50px 0;
+}
+
+.projects-section h1, .skills-section h1 {
+    font-size: 2.5rem;
+    color: #ff6347; /* Optional: Adds a pop of color */
+    margin-bottom: 20px;
+}
+
+.projects-container, .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project, .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    transition: transform 0.3s;
+}
+
+.project:hover, .skill:hover {
+    transform: scale(1.05);
+}
+
+.project img, .skill img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project a, .skill a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.project a:hover, .skill a:hover {
+    color: #fff;
+}
+
+.project p, .skill p {
+    color: #ccc;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.skill-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: center;
+}
+
+/* Media Queries for Mobile Layout */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        max-height: 0;
+        z-index: 20; /* Ensure this is above the container */
+    }
+    .nav-links.active {
+        max-height: 300px; /* Arbitrary max height to show the transition */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    nav ul li {
+        display: block;
+    }
+}
