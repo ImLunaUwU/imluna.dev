@@ -1,0 +1,22 @@
+[
+    {
+        "SkillName": "HTML",
+        "Icon": "icons/HTML5.png",
+        "SkillDescription": "Markup language for creating web pages."
+    },
+    {
+        "SkillName": "CSS",
+        "Icon": "icons/CSS3.png",
+        "SkillDescription": "Style sheet language for designing web pages."
+    },
+    {
+        "SkillName": "JavaScript",
+        "Icon": "icons/JavaScript.png",
+        "SkillDescription": "Programming language for creating interactive web pages."
+    },
+    {
+        "SkillName": "Python",
+        "Icon": "icons/Python.png",
+        "SkillDescription": "High-level programming language for general-purpose programming."
+    }
+]

@@ -1,0 +1,6 @@
+[
+    { "name": "HTML", "src": "icons/HTML5.png" },
+    { "name": "CSS", "src": "icons/CSS3.png" },
+    { "name": "JavaScript", "src": "icons/JavaScript.png" },
+    { "name": "Python", "src": "icons/Python.png" }
+]
