@@ -2,25 +2,49 @@
     {
         "ProjectName": "Developer Website",
         "ProjectDescription": "A personal portfolio website to showcase my projects and skills. In fact it is this very website.",
-        "ProjectLink": "https://github.com/ImLunaUwU/imluna.dev/",
+        "ProjectLink": "https://github.com/ImLunaUwU/imluna.dev",
         "ProjectImage": "images/Portfolio.png"
     },
     {
         "ProjectName": "Personal Website",
         "ProjectDescription": "A personal (non-professional) website with basic info about me.",
-        "ProjectLink": "https://github.com/ImLunaUwU/imlunauwu.github.io/",
+        "ProjectLink": "https://github.com/ImLunaUwU/imlunauwu.github.io",
         "ProjectImage": "images/Personal.png"
     },
     {
         "ProjectName": "LunaHR",
-        "ProjectDescription": "A couple of simple applications to send heart rate data to VRChat through OSC.\nCurrently compatible with Polar (H10) HR monitors and Pulsoid.",
+        "ProjectDescription": "A couple of simple applications to send heart rate data to VRChat through OSC. Currently compatible with Polar (H10) HR monitors and Pulsoid.",
         "ProjectLink": "https://github.com/ImLunaUwU/LunaHR",
         "ProjectImage": "images/LunaHR.png"
     },
     {
         "ProjectName": "Luna's Tools",
-        "ProjectDescription": "A collection of useful scripts/tools I made.\nMight be useful to some, trash to others.",
+        "ProjectDescription": "A collection of useful scripts/tools I made. Might be useful to some, trash to others.",
         "ProjectLink": "https://github.com/ImLunaUwU/lunas-tools",
         "ProjectImage": "images/Tools.png"
+    },
+    {
+        "ProjectName": "PteroPlug",
+        "ProjectDescription": "An \"egg\" to run AutoPlug on Pterodactyl. More or less inactive by now.",
+        "ProjectLink": "https://github.com/ImLunaUwU/PteroPlug",
+        "ProjectImage": "images/PteroPlug.png"
+    },
+    {
+        "ProjectName": "DisplaynameWatcher",
+        "ProjectDescription": "A tool specifically developed to watch for updates in displaynames of certain people on VRChat. This tool is private and a release will likely never happen.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "APIs",
+        "ProjectDescription": "A now archived project of mine.",
+        "ProjectLink": "https://github.com/ImLunaUwU/APIs",
+        "ProjectImage": "images/APIs.png"
+    },
+    {
+        "ProjectName": "LuAntiAdblock",
+        "ProjectDescription": "A powerful anti adblock, which for obvious reasons will stay private. I do not plan on releasing this... Ever...",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
     }
 ]

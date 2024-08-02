@@ -265,6 +265,13 @@ footer {
     text-align: center;
 }
 
+.private-project {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: not-allowed;
+}
+
 .skill-description {
     margin-top: 10px;
     font-size: 0.9rem;
