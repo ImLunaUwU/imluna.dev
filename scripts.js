@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.getElementById('projects-container');
+    const skillsContainer = document.getElementById('skills-container');
+    const iconContainer = document.getElementById('icon-container');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    let icons = [];
+    let currentIndex = 0;
 
     async function fetchProjects() {
         try {
@@ -19,18 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${project.ProjectImage}" alt="${project.ProjectName} Image">
                 <h2>${project.ProjectName}</h2>
                 <p>${project.ProjectDescription}</p>
-                <a href="${project.ProjectLink}" target="_blank">View Project</a>
+                ${project.ProjectLink === "PRIVATE" ? 
+                    `<span class="private-project">Private</span>` : 
+                    `<a href="${project.ProjectLink}" target="_blank">View Project</a>`
+                }
             `;
             projectsContainer.appendChild(projectElement);
         });
     }
-
-    fetchProjects();
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const skillsContainer = document.getElementById('skills-container');
 
     async function fetchSkills() {
         try {
@@ -54,18 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             skillsContainer.appendChild(skillElement);
         });
     }
-
-    fetchSkills();
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const iconContainer = document.getElementById('icon-container');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-    let icons = [];
-    let currentIndex = 0;
 
     async function fetchIcons() {
         try {
@@ -102,8 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    fetchIcons();
-
     // Particle Network Initialization
     var particleNetworkCanvas = document.getElementById('particle-network');
     var particleNetworkOptions = {
@@ -137,6 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => mobileMenu.classList.remove('bounce-reverse'), 600);
         }
     });
+
+    fetchProjects();
+    fetchSkills();
+    fetchIcons();
 });
 
 // ParticleNetwork class code
