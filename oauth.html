@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna - OAuth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>Luna - OAuth</title>
+    <meta name="title" content="Luna - OAuth">
+    <meta name="description" content="Luna, a shitty developer. 
+    Gay furries are cute asf istg...">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imluna.dev/">
+    <meta property="og:title" content="Luna - OAuth">
+    <meta property="og:description" content="Luna, a shitty developer. 
+    Gay furries are cute asf istg...">
+    <meta property="og:image" content="https://lunauwu.net/icon.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://imluna.dev/">
+    <meta property="twitter:title" content="Luna - OAuth">
+    <meta property="twitter:description" content="Luna, a shitty developer. 
+    Gay furries are cute asf istg...">
+    <meta property="twitter:image" content="https://lunauwu.net/icon.png">
+</head>
+<body>
+    <div id="background-container">
+        <div id="particle-network"></div>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="code-icon">&lt;/&gt;</span> imluna.dev
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
+                <li><a href="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-container">
+        <h1>OAuth Response</h1>
+        <div id="response-message" class="response-message"></div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Luna. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to parse query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                status: params.get('status'),
+                error: params.get('error')
+            };
+        }
+
+        // Function to display the appropriate message based on the OAuth response
+        function displayMessage() {
+            const queryParams = getQueryParams();
+            const responseMessageElement = document.getElementById('response-message');
+
+            if (queryParams.status === 'success') {
+                responseMessageElement.textContent = 'Login successful! This page can now be closed.';
+                responseMessageElement.style.color = 'green';
+            } else if (queryParams.status === 'failure') {
+                let errorMessage = 'Login failed.';
+                switch (queryParams.error) {
+                    case 'invalid_scope':
+                        errorMessage += ' Reason: Invalid scope.';
+                        break;
+                    case 'access_denied':
+                        errorMessage += ' Reason: Access denied.';
+                        break;
+                    case 'invalid_request':
+                        errorMessage += ' Reason: Invalid request.';
+                        break;
+                    case 'unauthorized_client':
+                        errorMessage += ' Reason: Unauthorized client.';
+                        break;
+                    case 'unsupported_response_type':
+                        errorMessage += ' Reason: Unsupported response type.';
+                        break;
+                    case 'server_error':
+                        errorMessage += ' Reason: Server error.';
+                        break;
+                    case 'temporarily_unavailable':
+                        errorMessage += ' Reason: Temporarily unavailable.';
+                        break;
+                    default:
+                        errorMessage += ' Unknown error occurred.';
+                }
+                responseMessageElement.textContent = errorMessage;
+                responseMessageElement.style.color = 'red';
+            }
+        }
+
+        // Call the displayMessage function when the page loads
+        window.onload = displayMessage;
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
