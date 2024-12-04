@@ -29,9 +29,7 @@ body {
   
   .content {
     white-space: pre-wrap;
-    display: inline-block;
-    text-indent: -50px;
-    padding-left: 50px;
+    display: inline-table;
   }
   
   .embed {
