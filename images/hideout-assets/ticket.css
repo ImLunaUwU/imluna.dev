@@ -38,6 +38,7 @@ body {
     margin-top: 10px;
     border-left: 4px solid #007bff;
     border-radius: 5px;
+    max-width: fit-content;
   }
   
   a {
