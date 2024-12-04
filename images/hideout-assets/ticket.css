@@ -50,3 +50,7 @@ body {
     text-decoration: underline;
   }
   
+  .d-emoji {
+    max-height: 30px;
+    margin-bottom: -8px;
+  }
