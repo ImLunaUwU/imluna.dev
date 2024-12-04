@@ -21,12 +21,25 @@
     margin-top: 5px;
   }
   
-  .media-image {
-    max-width: 100%;
-    margin: 5px 0;
-    border-radius: 5px;
+  .role-mention {
+    font-weight: bold;
   }
   
+  .mention {
+    font-weight: bold;
+    color: #00aaff;
+  }
+  
+  .media-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .media-link:hover {
+    text-decoration: underline;
+  }
+  
+  .media-image,
   .media-video {
     max-width: 100%;
     margin: 5px 0;
@@ -41,12 +54,5 @@
   
   .media-file:hover {
     text-decoration: underline;
-  }
-  
-  .media-embed {
-    max-width: 100%;
-    height: 300px;
-    margin: 10px 0;
-    border: none;
   }
   
