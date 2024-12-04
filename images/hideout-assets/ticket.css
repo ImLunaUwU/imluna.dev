@@ -14,12 +14,12 @@ body {
     margin-bottom: 15px;
     padding: 10px;
     border-bottom: 1px solid #333;
-    white-space: pre-wrap;
   }
   
   .timestamp {
     color: #888;
     margin-right: 10px;
+    font-family: monospace;
   }
   
   .author {
@@ -28,7 +28,10 @@ body {
   }
   
   .content {
-    margin-left: 20px; /* Indent content lines */
+    white-space: pre-wrap;
+    display: inline-block;
+    text-indent: -50px;
+    padding-left: 50px;
   }
   
   .embed {
@@ -46,11 +49,5 @@ body {
   
   a:hover {
     text-decoration: underline;
-  }
-  
-  .timestamp {
-    color: #888;
-    margin-right: 10px;
-    font-family: monospace;
   }
   
