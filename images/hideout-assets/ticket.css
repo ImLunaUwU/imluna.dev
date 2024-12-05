@@ -54,3 +54,7 @@ body {
     max-height: 30px;
     margin-bottom: -8px;
   }
+
+  .sticker img {
+    width: 150px;
+  }
