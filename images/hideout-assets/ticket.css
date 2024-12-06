@@ -1,85 +1,84 @@
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .transcript-container {
-    padding: 20px;
-  }
-  
-  .message {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-bottom: 1px solid #333;
-  }
-  
-  .timestamp {
-    color: #888;
-    margin-right: 10px;
-    font-family: monospace;
-  }
-  
-  .author {
-    font-weight: bold;
-    color: #00aaff;
-  }
-  
-  .content {
-    white-space: pre-wrap;
-    display: inline-table;
-  }
-  
-  .embed {
-    background-color: #1f1f1f;
-    padding: 10px;
-    margin-top: 10px;
-    border-left: 4px solid #007bff;
-    border-radius: 5px;
-    max-width: fit-content;
-  }
-  
-  a {
-    color: #00aaff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .d-emoji {
-    max-height: 30px;
-    margin-bottom: -8px;
-  }
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .sticker img {
-    width: 150px;
-  }
+.transcript-container {
+  padding: 20px;
+}
 
-.mention {
-  display: inline-block;
-  padding: 2px 6px;
-  border-radius: 12px;
-  font-weight: 500;
-  margin: 0 2px;
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.timestamp {
+  color: #888;
+  margin-right: 10px;
+  font-family: monospace;
+}
+
+.author {
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.content {
+  white-space: pre-wrap;
+  display: inline-table;
+}
+
+.embed {
+  background-color: #1f1f1f;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.d-emoji {
+  max-height: 30px;
+  margin-bottom: -8px;
+}
+
+.sticker img {
+  width: 150px;
+}
+
+.user-mention {
+  background-color: rgba(88, 101, 242, 0.6); /* Blurple with slight transparency */
   color: white;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-weight: 500; /* Slightly heavier font */
+  display: inline-block;
+  margin: 0 2px;
 }
 
-.mention.user {
-  background-color: rgba(88, 101, 242, 0.6);
+.role-mention {
+  color: white;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-weight: 500; /* Slightly heavier font */
+  display: inline-block;
+  margin: 0 2px;
 }
 
-.mention.user.unknown {
-  background-color: rgba(128, 128, 128, 0.6);
-}
-
-.mention.role {
-  background-color: var(--role-color, rgba(88, 101, 242, 0.6));
-}
-
-.mention.role.unknown {
-  background-color: rgba(128, 128, 128, 0.6);
+/* Variable color for role mention */
+.role-mention {
+  background-color: var(--role-color, rgba(88, 101, 242, 0.6)); /* Default to blurple if no color specified */
 }
