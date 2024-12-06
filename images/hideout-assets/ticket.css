@@ -60,11 +60,11 @@ a:hover {
 }
 
 .user-mention {
-  background-color: rgba(88, 101, 242, 0.6); /* Blurple with slight transparency */
+  background-color: rgba(88, 101, 242, 0.6);
   color: white;
   border-radius: 12px;
   padding: 2px 6px;
-  font-weight: 500; /* Slightly heavier font */
+  font-weight: 500;
   display: inline-block;
   margin: 0 2px;
 }
@@ -73,12 +73,8 @@ a:hover {
   color: white;
   border-radius: 12px;
   padding: 2px 6px;
-  font-weight: 500; /* Slightly heavier font */
+  font-weight: 500;
   display: inline-block;
   margin: 0 2px;
-}
-
-/* Variable color for role mention */
-.role-mention {
-  background-color: var(--role-color, rgba(88, 101, 242, 0.6)); /* Default to blurple if no color specified */
+  background-color: var(--role-color, rgba(88, 101, 242, 0.6));
 }
