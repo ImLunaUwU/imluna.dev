@@ -78,3 +78,7 @@ a:hover {
   margin: 0 2px;
   background-color: var(--role-color, rgba(88, 101, 242, 0.6));
 }
+
+.embed-thumbnail {
+  max-width: 350px;
+}
