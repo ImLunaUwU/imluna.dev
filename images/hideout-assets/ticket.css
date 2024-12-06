@@ -58,3 +58,28 @@ body {
   .sticker img {
     width: 150px;
   }
+
+.mention {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 500;
+  margin: 0 2px;
+  color: white;
+}
+
+.mention.user {
+  background-color: rgba(88, 101, 242, 0.6);
+}
+
+.mention.user.unknown {
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+.mention.role {
+  background-color: var(--role-color, rgba(88, 101, 242, 0.6));
+}
+
+.mention.role.unknown {
+  background-color: rgba(128, 128, 128, 0.6);
+}
