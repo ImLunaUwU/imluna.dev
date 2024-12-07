@@ -55,8 +55,16 @@ a:hover {
   margin-bottom: -8px;
 }
 
+.sticker {
+  display: inline-table;
+  margin-bottom: 75px;
+}
+
 .sticker img {
-  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: -65px;
 }
 
 .user-mention {
@@ -80,5 +88,6 @@ a:hover {
 }
 
 .embed-thumbnail {
-  max-width: 350px;
+  height: 350px;
+  max-width: 100%;
 }
