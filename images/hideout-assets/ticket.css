@@ -87,9 +87,9 @@ a:hover {
   background-color: var(--role-color, rgba(88, 101, 242, 0.6));
 }
 
-.embed img.embed-thumbnail {
-  display: block;
-  margin-top: 10px;
+.embed-thumbnail {
+  height: 350px;
   max-width: 100%;
-  height: auto;
+  object-fit: cover;
+  display: block;
 }
