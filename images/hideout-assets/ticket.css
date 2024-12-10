@@ -101,6 +101,7 @@ a:hover {
   margin-bottom: 6px;
   border-radius: 4px;
   font-size: 0.9em;
+  width:fit-content;
 }
 
 .reply-author {
