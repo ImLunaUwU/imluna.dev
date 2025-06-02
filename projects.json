@@ -46,5 +46,53 @@
         "ProjectDescription": "A powerful anti adblock, which for obvious reasons will stay private. I do not plan on releasing this... Ever...",
         "ProjectLink": "PRIVATE",
         "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "*Redacted* Toolkit",
+        "ProjectDescription": "A VRChat moderation toolkit for an organization which alerts for bad users in an instance.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "VRC-Banlogger",
+        "ProjectDescription": "Private VRChat ban logger for my VRChat group.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "Adventurous Allies Companion App",
+        "ProjectDescription": "Similar to the aforementioned toolkit but safer and more advanced. More focused towards group moderation and alerting of groups rather than individual users.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "DB-Server",
+        "ProjectDescription": "A simple but secure database server, used as a backend for things like the Companion App.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "Audio Mixer",
+        "ProjectDescription": "A straightforward, easy to use audio mixer (Like voicemeeter) I made for my partner. Not currently available for release, though contact me if interested.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "*Redacted* Ticket System",
+        "ProjectDescription": "A from-scratch Discord ticketing system originally designed for an organization, though it was never implemented due to issues within the team.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "Simple Time Clock",
+        "ProjectDescription": "A time clock app which allows trial staff (On VRChat) to clock in and out. The app would send a webhook POST request to Discord, with corresponding timestamps.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
+    },
+    {
+        "ProjectName": "Much more...",
+        "ProjectDescription": "I've made more things, though some of them I am unable to mention here.",
+        "ProjectLink": "PRIVATE",
+        "ProjectImage": "images/Private.png"
     }
 ]
