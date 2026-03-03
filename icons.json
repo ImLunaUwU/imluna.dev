@@ -1,6 +1,7 @@
 [
-    { "name": "HTML", "src": "icons/HTML5.png" },
-    { "name": "CSS", "src": "icons/CSS3.png" },
-    { "name": "JavaScript", "src": "icons/JavaScript.png" },
-    { "name": "Python", "src": "icons/Python.png" }
+    { "name": "HTML", "src": "icons/HTML5.svg?v=2" },
+    { "name": "CSS", "src": "icons/CSS3.svg?v=2" },
+    { "name": "JavaScript", "src": "icons/JavaScript.svg?v=2" },
+    { "name": "Python", "src": "icons/Python.svg?v=2" },
+    { "name": "Electron", "src": "icons/Electron.svg?v=2" }
 ]

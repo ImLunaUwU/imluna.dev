@@ -1,22 +1,27 @@
 [
     {
         "SkillName": "HTML",
-        "Icon": "icons/HTML5.png",
+        "Icon": "icons/HTML5.svg?v=2",
         "SkillDescription": "Markup language for creating web pages."
     },
     {
         "SkillName": "CSS",
-        "Icon": "icons/CSS3.png",
+        "Icon": "icons/CSS3.svg?v=2",
         "SkillDescription": "Style sheet language for designing web pages."
     },
     {
         "SkillName": "JavaScript",
-        "Icon": "icons/JavaScript.png",
+        "Icon": "icons/JavaScript.svg?v=2",
         "SkillDescription": "Programming language for creating interactive web pages."
     },
     {
         "SkillName": "Python",
-        "Icon": "icons/Python.png",
+        "Icon": "icons/Python.svg?v=2",
         "SkillDescription": "High-level programming language for general-purpose programming."
+    },
+    {
+        "SkillName": "Electron",
+        "Icon": "icons/Electron.svg?v=2",
+        "SkillDescription": "Framework for building cross-platform desktop apps with web technologies."
     }
 ]
