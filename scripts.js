@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const projectsContainer = document.getElementById('projects-container');
+    const featuredProjectsContainer = document.getElementById('featured-projects-container');
+    const privateProjectsContainer = document.getElementById('private-projects-container');
     const skillsContainer = document.getElementById('skills-container');
     const iconContainer = document.getElementById('icon-container');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -8,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     async function fetchProjects() {
+        if (!projectsContainer && !featuredProjectsContainer && !privateProjectsContainer) return;
+
         try {
             const response = await fetch('projects.json');
             const projects = await response.json();
@@ -18,23 +22,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayProjects(projects) {
+        if (!projectsContainer && !featuredProjectsContainer && !privateProjectsContainer) return;
+
+        const featuredProjects = projects.filter(project => project.Featured === true && project.ProjectLink !== 'PRIVATE');
+        const publicProjects = projects.filter(project => project.ProjectLink !== 'PRIVATE' && project.Featured !== true);
+        const privateProjects = projects.filter(project => project.ProjectLink === 'PRIVATE');
+
+        renderProjectGroup(featuredProjectsContainer, featuredProjects);
+        renderProjectGroup(projectsContainer, publicProjects);
+        renderProjectGroup(privateProjectsContainer, privateProjects);
+    }
+
+    function renderProjectGroup(container, projects) {
+        if (!container) return;
+
+        container.innerHTML = '';
+
         projects.forEach(project => {
+            const isPrivate = project.ProjectLink === 'PRIVATE';
+            const status = project.Status || (isPrivate ? 'Private' : 'Public');
+            const techStack = Array.isArray(project.TechStack) ? project.TechStack : [];
+            const metaPills = [`<span class="meta-pill">${status}</span>`, ...techStack.slice(0, 4).map(tech => `<span class="meta-pill">${tech}</span>`)].join('');
+
             const projectElement = document.createElement('div');
             projectElement.classList.add('project');
             projectElement.innerHTML = `
-                <img src="${project.ProjectImage}" alt="${project.ProjectName} Image">
+                <img src="${project.ProjectImage}" alt="${project.ProjectName} Image" loading="lazy" decoding="async" width="600" height="600">
                 <h2>${project.ProjectName}</h2>
                 <p>${project.ProjectDescription}</p>
-                ${project.ProjectLink === "PRIVATE" ? 
+                <div class="project-meta">${metaPills}</div>
+                ${isPrivate ? 
                     `<span class="private-project">Private</span>` : 
-                    `<a href="${project.ProjectLink}" target="_blank">View Project</a>`
+                    `<a href="${project.ProjectLink}" target="_blank" rel="noopener noreferrer">View Project</a>`
                 }
             `;
-            projectsContainer.appendChild(projectElement);
+            container.appendChild(projectElement);
         });
     }
 
     async function fetchSkills() {
+        if (!skillsContainer) return;
+
         try {
             const response = await fetch('skills.json');
             const skills = await response.json();
@@ -45,11 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displaySkills(skills) {
+        if (!skillsContainer) return;
+
         skills.forEach(skill => {
             const skillElement = document.createElement('div');
             skillElement.classList.add('skill');
             skillElement.innerHTML = `
-                <img src="${skill.Icon}" alt="${skill.SkillName}">
+                <img src="${skill.Icon}" alt="${skill.SkillName}" loading="lazy" decoding="async" width="100" height="100">
                 <p>${skill.SkillName}</p>
                 <div class="skill-description">${skill.SkillDescription}</div>
             `;
@@ -58,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function fetchIcons() {
+        if (!iconContainer) return;
+
         try {
             const response = await fetch('icons.json');
             icons = await response.json();
@@ -68,8 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function preloadImages(icons) {
+        if (!iconContainer) return;
+
         let loadedImages = 0;
         const totalImages = icons.length;
+
+        if (totalImages === 0) return;
 
         icons.forEach(icon => {
             const img = new Image();
@@ -85,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateIcon() {
-        if (icons.length > 0) {
+        if (iconContainer && icons.length > 0) {
             const icon = icons[currentIndex];
             iconContainer.innerHTML = `<img src="${icon.src}" alt="${icon.name}"><p>${icon.name}</p>`;
             currentIndex = (currentIndex + 1) % icons.length;
@@ -94,37 +130,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Particle Network Initialization
     var particleNetworkCanvas = document.getElementById('particle-network');
-    var particleNetworkOptions = {
-        particleColor: '#fff',
-        background: '#121212',
-        interactive: true,
-        velocity: 0.66,
-        density: 10000
-    };
-    new ParticleNetwork(particleNetworkCanvas, particleNetworkOptions);
+    if (particleNetworkCanvas) {
+        var particleNetworkOptions = {
+            particleColor: '#fff',
+            background: '#121212',
+            interactive: true,
+            velocity: 0.66,
+            density: 10000
+        };
+        new ParticleNetwork(particleNetworkCanvas, particleNetworkOptions);
+    }
 
     // Mobile menu toggle
-    mobileMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenu.classList.toggle('open');
-        if (mobileMenu.classList.contains('open')) {
-            mobileMenu.classList.add('bounce');
-            setTimeout(() => mobileMenu.classList.remove('bounce'), 600);
-        } else {
-            mobileMenu.classList.add('bounce-reverse');
-            setTimeout(() => mobileMenu.classList.remove('bounce-reverse'), 600);
-        }
-    });
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('open');
+            const isOpen = mobileMenu.classList.contains('open');
+            mobileMenu.setAttribute('aria-expanded', String(isOpen));
+
+            if (isOpen) {
+                mobileMenu.classList.add('bounce');
+                setTimeout(() => mobileMenu.classList.remove('bounce'), 600);
+            } else {
+                mobileMenu.classList.add('bounce-reverse');
+                setTimeout(() => mobileMenu.classList.remove('bounce-reverse'), 600);
+            }
+        });
+    }
 
     // Close menu on link click
-    navLinks.addEventListener('click', (event) => {
-        if (event.target.tagName === 'A') {
-            navLinks.classList.remove('active');
-            mobileMenu.classList.remove('open');
-            mobileMenu.classList.add('bounce-reverse');
-            setTimeout(() => mobileMenu.classList.remove('bounce-reverse'), 600);
-        }
-    });
+    if (mobileMenu && navLinks) {
+        navLinks.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                mobileMenu.setAttribute('aria-expanded', 'false');
+                mobileMenu.classList.add('bounce-reverse');
+                setTimeout(() => mobileMenu.classList.remove('bounce-reverse'), 600);
+            }
+        });
+    }
 
     fetchProjects();
     fetchSkills();

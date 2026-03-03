@@ -3,30 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://imluna.dev/projects">
         <title>Luna - Projects</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        
-      <!-- Primary Meta Tags -->
-      <title>Luna - Projects</title>
+      
+            <!-- Primary Meta Tags -->
       <meta name="title" content="Luna - Projects">
-      <meta name="description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+            <meta name="description" content="Browse Luna's software projects, from web tools to creative coding experiments and open-source utilities.">
       
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
-      <meta property="og:url" content="https://imluna.dev/">
+            <meta property="og:url" content="https://imluna.dev/projects">
       <meta property="og:title" content="Luna - Projects">
-      <meta property="og:description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+            <meta property="og:description" content="Browse Luna's software projects, from web tools to creative coding experiments and open-source utilities.">
       <meta property="og:image" content="https://lunauwu.net/icon.png">
       
       <!-- Twitter -->
       <meta property="twitter:card" content="summary_large_image">
-      <meta property="twitter:url" content="https://imluna.dev/">
+            <meta property="twitter:url" content="https://imluna.dev/projects">
       <meta property="twitter:title" content="Luna - Projects">
-      <meta property="twitter:description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+            <meta property="twitter:description" content="Browse Luna's software projects, from web tools to creative coding experiments and open-source utilities.">
       <meta property="twitter:image" content="https://lunauwu.net/icon.png">
     </head>
 <body>
@@ -38,23 +35,29 @@
             <div class="logo">
                 <span class="code-icon">&lt;/&gt;</span> imluna.dev
             </div>
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Toggle navigation menu" aria-controls="primary-nav" aria-expanded="false">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-times"></i>
-            </div>
-            <ul class="nav-links">
+            </button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="index"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
                 <li><a href="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a class="external-nav-link" href="https://links.imluna.dev" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Links</a></li>
             </ul>
         </nav>
     </header>
     <div class="main-container">
         <section class="projects-section" id="projects">
             <h1>My Projects</h1>
+            <h2 class="projects-subtitle">Featured Projects</h2>
+            <div class="projects-container" id="featured-projects-container"></div>
+            <h2 class="projects-subtitle">More Public Projects</h2>
             <div class="projects-container" id="projects-container">
                 <!-- Projects will be loaded here -->
             </div>
+            <h2 class="projects-subtitle">Private / Internal Projects</h2>
+            <div class="projects-container" id="private-projects-container"></div>
         </section>
     </div>
     <footer>

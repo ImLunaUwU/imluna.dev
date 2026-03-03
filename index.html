@@ -3,30 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://imluna.dev/">
         <title>Luna - Developer Portfolio</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        
-      <!-- Primary Meta Tags -->
-      <title>Luna - Developer Portfolio</title>
+      
+            <!-- Primary Meta Tags -->
       <meta name="title" content="Luna - Developer Portfolio">
-      <meta name="description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+        <meta name="description" content="Portfolio of Luna, a self-taught developer building web apps, Electron desktop apps, scripts, and creative software projects.">
       
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://imluna.dev/">
       <meta property="og:title" content="Luna - Developer Portfolio">
-      <meta property="og:description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+        <meta property="og:description" content="Portfolio of Luna, a self-taught developer building web apps, Electron desktop apps, scripts, and creative software projects.">
       <meta property="og:image" content="https://lunauwu.net/icon.png">
       
       <!-- Twitter -->
       <meta property="twitter:card" content="summary_large_image">
       <meta property="twitter:url" content="https://imluna.dev/">
       <meta property="twitter:title" content="Luna - Developer Portfolio">
-      <meta property="twitter:description" content="Luna, a shitty developer. 
-      Gay furries are cute asf istg...">
+        <meta property="twitter:description" content="Portfolio of Luna, a self-taught developer building web apps, Electron desktop apps, scripts, and creative software projects.">
       <meta property="twitter:image" content="https://lunauwu.net/icon.png">
     </head>
 <body>
@@ -38,14 +35,15 @@
             <div class="logo">
                 <span class="code-icon">&lt;/&gt;</span> imluna.dev
             </div>
-            <div class="menu-toggle" id="mobile-menu">
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Toggle navigation menu" aria-controls="primary-nav" aria-expanded="false">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-times"></i>
-            </div>
-            <ul class="nav-links">
+            </button>
+            <ul class="nav-links" id="primary-nav">
                 <li><a href="index"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
                 <li><a href="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a class="external-nav-link" href="https://links.imluna.dev" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Links</a></li>
             </ul>
         </nav>
     </header>
@@ -53,16 +51,29 @@
         <section class="intro" id="about">
             <div class="text">
                 <h1>Hi, I'm Luna</h1>
-                <p>I am a dedicated self-taught developer specializing in HTML, CSS, JavaScript, and Python. My passion lies in crafting applications, scripts, and whatever wacky things I can dream up. I have an eye for detail and an addiction to perfection. :3</p>
+                <p>I build practical tools and weird ideas into working software. I am self-taught and focused on shipping web and Electron desktop apps that solve real problems.</p>
+                <div class="intro-actions">
+                    <a class="primary-btn" href="projects"><i class="fas fa-project-diagram"></i> View Projects</a>
+                    <a class="secondary-btn" href="https://links.imluna.dev" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> Open Links</a>
+                </div>
                 <div class="social-links">
-                    <a href="https://github.com/ImLunaUwU" target="_blank">GitHub</a>
-                    <a href="https://lunauwu.net/" target="_blank">Personal Website</a>
-                    <a href="https://x.com/ImLunaUwU" target="_blank">Twitter (X)</a>
-                    <a href="https://ko-fi.com/imlunauwu" target="_blank">Ko-fi</a>
+                    <a href="https://github.com/ImLunaUwU" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://lunauwu.net/" target="_blank" rel="noopener noreferrer">Personal Website</a>
+                    <a href="https://links.imluna.dev" target="_blank" rel="noopener noreferrer">Links</a>
+                    <a href="https://x.com/ImLunaUwU" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+                    <a href="https://ko-fi.com/imlunauwu" target="_blank" rel="noopener noreferrer">Ko-fi</a>
                 </div>
             </div>
             <div class="skills">
                 <div id="icon-container"></div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <p>Best ways to contact me are my links page or email.</p>
+            <div class="contact-links">
+                <a href="https://links.imluna.dev" target="_blank" rel="noopener noreferrer">Links Page</a>
+                <a href="mailto:contact@lunauwu.net">contact@lunauwu.net</a>
             </div>
         </section>
     </div>
