@@ -3,25 +3,45 @@
         "ProjectName": "Developer Website",
         "ProjectDescription": "A personal portfolio website to showcase my projects and skills. In fact it is this very website.",
         "ProjectLink": "https://github.com/ImLunaUwU/imluna.dev",
-        "ProjectImage": "images/Portfolio.png"
+        "ProjectImage": "images/Portfolio.png",
+        "Featured": true,
+        "Status": "Active",
+        "TechStack": ["HTML", "CSS", "JavaScript"]
     },
     {
         "ProjectName": "Personal Website",
         "ProjectDescription": "A personal (non-professional) website with basic info about me.",
         "ProjectLink": "https://github.com/ImLunaUwU/imlunauwu.github.io",
-        "ProjectImage": "images/Personal.png"
+        "ProjectImage": "images/Personal.png",
+        "Status": "Maintained",
+        "TechStack": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "ProjectName": "Audio Mixer",
+        "ProjectDescription": "A straightforward, easy-to-use Electron desktop audio mixer (like Voicemeeter). It is now public and open source.",
+        "ProjectLink": "https://github.com/ImLunaUwU/Audio-Mixer",
+        "ProjectImage": "images/AudioMixer.png",
+        "Featured": true,
+        "Status": "Active",
+        "TechStack": ["Electron", "JavaScript", "Audio"]
     },
     {
         "ProjectName": "LunaHR",
-        "ProjectDescription": "A couple of simple applications to send heart rate data to VRChat through OSC. Currently compatible with Polar (H10) HR monitors and Pulsoid.",
+        "ProjectDescription": "An Electron desktop app to send heart rate data to VRChat through OSC. It is open source, but currently semi-unmaintained due to lack of motivation. Compatible with Polar (H10) HR monitors and Pulsoid.",
         "ProjectLink": "https://github.com/ImLunaUwU/LunaHR",
-        "ProjectImage": "images/LunaHR.png"
+        "ProjectImage": "images/LunaHR.png",
+        "Featured": true,
+        "Status": "Maintained",
+        "TechStack": ["Electron", "JavaScript", "OSC", "VRChat"]
     },
     {
         "ProjectName": "Luna's Tools",
         "ProjectDescription": "A collection of useful scripts/tools I made. Might be useful to some, trash to others.",
         "ProjectLink": "https://github.com/ImLunaUwU/lunas-tools",
-        "ProjectImage": "images/Tools.png"
+        "ProjectImage": "images/Tools.png",
+        "Featured": true,
+        "Status": "Active",
+        "TechStack": ["Python", "Automation"]
     },
     {
         "ProjectName": "PteroPlug",
@@ -39,7 +59,9 @@
         "ProjectName": "APIs",
         "ProjectDescription": "A now archived project of mine.",
         "ProjectLink": "https://github.com/ImLunaUwU/APIs",
-        "ProjectImage": "images/APIs.png"
+        "ProjectImage": "images/APIs.png",
+        "Status": "Archived",
+        "TechStack": ["API", "Backend"]
     },
     {
         "ProjectName": "LuAntiAdblock",
@@ -68,12 +90,6 @@
     {
         "ProjectName": "DB-Server",
         "ProjectDescription": "A simple but secure database server, used as a backend for things like the Companion App.",
-        "ProjectLink": "PRIVATE",
-        "ProjectImage": "images/Private.png"
-    },
-    {
-        "ProjectName": "Audio Mixer",
-        "ProjectDescription": "A straightforward, easy to use audio mixer (Like voicemeeter) I made for my partner. Not currently available for release, though contact me if interested.",
         "ProjectLink": "PRIVATE",
         "ProjectImage": "images/Private.png"
     },
