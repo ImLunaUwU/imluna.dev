@@ -1,5 +1,7 @@
 # MutedToMuzzled (Revenge)
 
+![Preview](https://imluna.dev/images/Mutt.jpg)
+
 Replaces Discord Android's muted mic icon with the dog muzzle from
 https://github.com/zoez22/muzzlemute
 
